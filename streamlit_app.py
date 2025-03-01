@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 # Initialize OpenAI client
-client = OpenAI(api_key=st.secrets("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Set up the title and description
 st.title("เเชทบอท น.ม.รตอพ")
