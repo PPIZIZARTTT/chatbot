@@ -2,7 +2,6 @@ import os
 import streamlit as st
 from openai import OpenAI
 import PyPDF2
-from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
