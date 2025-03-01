@@ -3,8 +3,6 @@ import streamlit as st
 from openai import OpenAI
 import PyPDF2
 
-# Load environment variables
-load_dotenv()
 
 # Set page config
 st.set_page_config(
