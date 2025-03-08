@@ -40,7 +40,7 @@ def read_pdf(file_path):
 # Load context once at startup
 context = read_pdf(file_path)
 if context:
-    st.success("ไฟล์ข้อมูลถูกโหลดสำเร็จ")
+    st.success("")
 else: 
     st.error("ขออภัยตอนนี้ผมยังไม่สามารถเข้าถึงข้อมูลได้ กรุณาเเจ้งด.ช.กิตติภพ ว่องไวให้มาซ้อมด่วนๆ")
 
