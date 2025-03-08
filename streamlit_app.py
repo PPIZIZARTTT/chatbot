@@ -20,7 +20,7 @@ st.markdown("สวัสดีครับผมเป็นเเชทบอ�
 
 # Define your PDF file path
 # Update this path to the correct location in your deployed environment
-file_path = r'files/context.pdf'  # This should be the relative path where your PDF will be stored
+file_path = "files/context.pdf"  # This should be the relative path where your PDF will be stored
 
 # Read the PDF
 @st.cache_data  # This caches the result so it's only loaded once
@@ -31,7 +31,7 @@ def read_pdf(file_path):
             pdf_reader = PyPDF2.PdfReader(file)
             for page_num in range(len(pdf_reader.pages)):
                 page = pdf_reader.pages[page_num]
-                text += page.extract_text()
+                text += page.extract_text() or ""
         return text
     except Exception as e:
         st.error(f"Error reading PDF: {e}")
@@ -40,7 +40,7 @@ def read_pdf(file_path):
 # Load context once at startup
 context = read_pdf(file_path)
 if context:
-    st.success("")
+    st.success("ไฟล์ข้อมูลถูกโหลดสำเร็จ")
 else: 
     st.error("ขออภัยตอนนี้ผมยังไม่สามารถเข้าถึงข้อมูลได้ กรุณาเเจ้งด.ช.กิตติภพ ว่องไวให้มาซ้อมด่วนๆ")
 
